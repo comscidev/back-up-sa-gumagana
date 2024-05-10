@@ -10,7 +10,7 @@
     tools:context=".Profilepage_function">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/admin_profpic"
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:src="@drawable/userprofile"
@@ -22,28 +22,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.material.imageview.ShapeableImageView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="55dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@id/imageView2"
-        app:layout_constraintTop_toTopOf="@id/imageView2">
-
-        <ImageButton
-            android:id="@+id/camera"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@color/transparent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/baseline_photo_camera_24" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="60dp"
@@ -67,18 +45,17 @@
 
 
     <TextView
-        android:id="@+id/titleName"
+        android:id="@+id/adminName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text=""
         android:hint="Wes Fesley"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/imageView2"
-        app:layout_constraintEnd_toEndOf="@id/imageView2"
-        app:layout_constraintTop_toBottomOf="@id/imageView2"/>
+        app:layout_constraintStart_toStartOf="@id/admin_profpic"
+        app:layout_constraintEnd_toEndOf="@id/admin_profpic"
+        app:layout_constraintTop_toBottomOf="@id/admin_profpic"/>
 
 
     <Button
@@ -94,7 +71,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearlayout"
         app:layout_constraintEnd_toEndOf="@+id/linearlayout"
         app:layout_constraintStart_toStartOf="@id/linearlayout"
-        app:layout_constraintTop_toBottomOf="@id/titleName"
+        app:layout_constraintTop_toBottomOf="@id/adminName"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
@@ -109,7 +86,7 @@
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleName">
+        app:layout_constraintTop_toBottomOf="@id/adminName">
 
 
         <LinearLayout
@@ -123,20 +100,20 @@
             android:layout_marginBottom="5dp">
 
             <TextView
-                android:id="@+id/labelName"
+                android:id="@+id/labelEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Name"
+                android:layout_weight="0.50"
+                android:text="Email"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/gray"/>
 
             <TextView
-                android:id="@+id/profile_Name"
+                android:id="@+id/profileEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="name"
+                android:hint="email@gmail.com"
                 android:textColor="@color/black"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"
@@ -159,95 +136,24 @@
 
 
             <TextView
-                android:id="@+id/labelEmail"
+                android:id="@+id/labelJob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Email"
+                android:text="Department"
                 android:textColor="@color/gray"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/profile_Email"
+                android:id="@+id/profileDepartment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="email"
+                android:hint="department"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="@color/brand_color"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:padding="8dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:id="@+id/labelPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Phone"
-                android:textColor="@color/gray"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/profile_Phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="number"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="@color/brand_color"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:padding="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/labelPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Password"
-                android:textColor="@color/gray"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/profile_Password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="password"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/black"
-                android:textSize="18sp"/>
         </LinearLayout>
 
     </LinearLayout>
