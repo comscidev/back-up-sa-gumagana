@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="Payroll Computation"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Employee Name"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/titlePayroll" />
 
@@ -75,7 +75,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/titlePayrollEmployeeName">
 
-
                 <AutoCompleteTextView
                     android:id="@+id/Payroll_EmpName"
                     android:layout_width="match_parent"
@@ -83,17 +82,30 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:backgroundTint="@android:color/transparent"
-                    android:hint="Full Name"
+                    android:hint="full name"
                     android:inputType="text"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/EmpEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="email@gmail.com"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
                     android:alpha="0.5"
-                    android:background="@color/gray" />
+                    android:background="@color/black" />
 
                 <LinearLayout
                     android:id="@+id/viewDesignationPayroll"
@@ -106,7 +118,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
                         android:padding="5dp"
-                        android:text="Designation"
+                        android:text="Department"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -115,7 +127,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="5dp"
-                        android:hint="designation"
+                        android:hint="department"
                         android:padding="5dp"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/black"
@@ -123,7 +135,34 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="5dp"
+                        android:text="Employement Status"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/EmpStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:hint="@string/hint_status"
+                        android:padding="5dp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
             </LinearLayout>
+
 
             <TextView
                 android:id="@+id/titlePayrollCompanyName"
@@ -131,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Company Name"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/viewEmployeeName" />
 
@@ -167,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Payslip Title"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/viewCompanyName" />
 
@@ -183,7 +222,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/titleTitleSlip">
 
-                <EditText
+                <TextView
                     android:id="@+id/Payslip_Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -202,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Earnings"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/viewTitleSlip" />
 
@@ -257,8 +296,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
                         android:padding="5dp"
-                        android:text="Overtime Rate
-"
+                        android:text="Overtime Hours"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -453,7 +491,7 @@
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
                     android:alpha="0.5"
-                    android:background="@color/gray" />
+                    android:background="@color/black" />
 
                 <LinearLayout
                     android:id="@+id/TotalEarnings"
@@ -494,7 +532,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Deductions"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/viewPayrollEarnings" />
 
@@ -631,7 +669,7 @@
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
                     android:alpha="0.5"
-                    android:background="@color/gray" />
+                    android:background="@color/black" />
 
                 <LinearLayout
                     android:id="@+id/titleEmployeeCashAdvance"
@@ -726,7 +764,7 @@
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
                     android:alpha="0.5"
-                    android:background="@color/gray" />
+                    android:background="@color/black" />
 
                 <LinearLayout
                     android:id="@+id/TotalDeductions"
@@ -766,7 +804,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Net Pay"
-                android:textSize="22sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/viewPayrollDeductions" />
 
